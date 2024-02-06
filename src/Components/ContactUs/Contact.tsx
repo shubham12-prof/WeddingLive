@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import  { useState, ChangeEvent, FormEvent } from "react";
 import { TextField, Button, Box, Container, Grid } from "@mui/material";
 import "./Contact.css";
 
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  contact: string;
+  subject: string;
+  message: string;
+}
+
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
     email: "",
@@ -12,7 +21,7 @@ const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -20,7 +29,7 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
   };
@@ -29,7 +38,6 @@ const Contact = () => {
     <Container>
       <form onSubmit={handleSubmit} style={{ width: "100%", height: "100%", backgroundColor: "white" }}>
         <Grid container spacing={2}>
-
           <Grid item xs={12} md={6}>
             <Box>
               <div>
@@ -41,7 +49,7 @@ const Contact = () => {
                 <p></p>
                 (+91) 88262 64586
                 <p></p>
-                HOURS OF OPERATION : 11AM - 8PM Call us for any kind of support. We
+                HOURS OF OPERATION: 11AM - 8PM Call us for any kind of support. We
                 will provide you effective resolution for any query you have.
               </div>
             </Box>
@@ -103,7 +111,7 @@ const Contact = () => {
                 onChange={handleChange}
                 style={{ margin: '10px 0' }}
               />
-              <Button variant="contained" sx={{ margin: "10px 0" }}>
+              <Button type="submit" variant="contained" sx={{ margin: "10px 0" }}>
                 Submit
               </Button>
             </Box>

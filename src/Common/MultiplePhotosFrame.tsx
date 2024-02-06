@@ -9,7 +9,12 @@ import {
 import Gallery from "../Components/Sections/ImageGallery";
 import ViewCarouselIcon from "@mui/icons-material/ViewCarousel";
 
-const MultiplePhotosFrame = ({ Images }) => {
+interface Image {
+  img: string;
+  title: string;
+}
+
+const MultiplePhotosFrame = ({ Images }: { Images: Image[] }) => {
   const [openPhotoModal, setOpenPhotoModal] = useState<boolean>(false);
   const [index, setIndex] = useState<number>(0);
   const isExtraSmallScreen = useMediaQuery("(max-width:400px)");

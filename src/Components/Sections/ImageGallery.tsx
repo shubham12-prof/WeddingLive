@@ -1,6 +1,6 @@
 import ImageGallery from "react-image-gallery";
 
-const Gallery = ({ startIndex, images }) => {
+const Gallery = ({ startIndex, images }: { startIndex: number, images: any[] }) => {
   return (
     <ImageGallery
       items={images}
@@ -9,4 +9,5 @@ const Gallery = ({ startIndex, images }) => {
     />
   );
 };
+
 export default Gallery;

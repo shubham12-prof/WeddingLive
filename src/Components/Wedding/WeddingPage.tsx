@@ -4,7 +4,6 @@ import { Box, Grid, Paper, Typography } from "@mui/material";
 import { Cards } from "../../Common/JSON/weddingCards";
 import Frame from "../../assets/frameup.jpg";
 import CollectionsIcon from "@mui/icons-material/Collections";
-import CropDinOutlinedIcon from "@mui/icons-material/CropDinOutlined";
 
 const WeddingPage = () => {
   useEffect(() => {
