@@ -9,36 +9,31 @@ import WeddingPage from "./Components/Wedding/WeddingPage";
 
 export const router = createBrowserRouter([
   {
-
     element: <Wrapper />,
     errorElement: <div>Error 404, Page not found</div>,
     children: [
       {
-        path:"/WeddingLive/",
-        element:<Home />
-      },
-      {
-        path: "/",
+        path: "/WeddingLive/",
         element: <Home />,
       },
       {
-        path: "/wedding",
+        path: "/WeddingLive/wedding",
         element: <WeddingPage />,
       },
       {
-        path: "/pre_wedding",
+        path: "/WeddingLive/pre_wedding",
         element: <PreWedding />,
       },
       {
-        path: "/about_us",
+        path: "/WeddingLive/about_us",
         element: <About />,
       },
       {
-        path: "/contact",
+        path: "/WeddingLive/contact",
         element: <Contact />,
       },
       {
-        path: "/haldi",
+        path: "/WeddingLive/haldi",
         element: <Haldi />,
       },
     ],
