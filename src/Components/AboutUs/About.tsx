@@ -1,7 +1,7 @@
-import React,{useEffect} from "react";
+import {useEffect} from "react";
 import { Typography, Container, Box } from "@mui/material";
 import "./About.css";
-import frameup from "./frameup.jpg";
+import frameup from "../../assets/frameup.jpg";
 
 
 const About = () => {
