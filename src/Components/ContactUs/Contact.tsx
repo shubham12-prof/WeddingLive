@@ -44,7 +44,7 @@ const Contact = () => {
             </Box>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Box width="100%" margin="0px" className="form-container">
+            <Box className="form-container">
               <h2>Contact Us</h2>
               <TextField
                 label="First Name"
