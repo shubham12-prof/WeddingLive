@@ -6,6 +6,7 @@ import About from "./Components/AboutUs/About";
 import Haldi from "./Components/Haldi/Haldi";
 import PreWedding from "./Components/Pre_Wedding/PreWedding";
 import WeddingPage from "./Components/Wedding/WeddingPage";
+
 export const router = createBrowserRouter([
   {
     element: <Wrapper />,
