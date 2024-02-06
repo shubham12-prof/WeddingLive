@@ -1,3 +1,52 @@
-.myfont {
-    margin: 10px 10px;
+.contact-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  background-color: #e9dbdb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 92.5%;
+}
+
+.phone-number {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.operation-hours {
+  margin-top: 10px;
+  color: #555;
+}
+
+.form-container {
+  background-color: #e9dbdb;
+  padding: 5px 20px 20px 20px ;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ffffff1a;
+}
+
+.input-field {
+  margin-bottom: 15rem;
+  top:-20px;
+  padding: 20px;
+  background-color: #fcfcfc;
+}
+
+.submit-button {
+  background-color: #4caf50;
+  color: #fff;
+  &:hover {
+    background-color: #45a049;
   }
+}

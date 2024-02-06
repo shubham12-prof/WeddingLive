@@ -14,7 +14,8 @@ export const router = createBrowserRouter([
     errorElement: <div>Error 404, Page not found</div>,
     children: [
       {
-        path:"/WeddingLive/"
+        path:"/WeddingLive/",
+        element:<Home />
       },
       {
         path: "/",

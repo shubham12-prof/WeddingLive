@@ -1,82 +1,108 @@
-.image {
-    width: 100%;
-    height: 70vh;
-}
-
 .container {
-    /* position: absolute; */
-    width: 100%;
-    /* margin-left: 3.5%; */
-    border-radius: 10px; 
-    /* margin-top: -15rem; */
-    padding: 20px;
-    background-color: rgb(237, 232, 232);
-    z-index: 2;
-    font-family: 'Georgia, Times, "Times New Roman", serif';
-    font-size: 1.2rem;
-    line-height: 1.6;
-    letter-spacing: 0.02em;
-    color: #333;
-    font-style: italic;
-    font-weight: 400;
-    text-align: justify;
+  margin-top: -23%;
+  background-color: white;
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 100%;
 }
-
 
 .box {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-@keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeInAnimation 1.5s forwards;
+}
+
+.text-fade-in {
+  animation: textFadeInAnimation 1.5s forwards;
+}
+
+.rotate-animation {
+  transform: rotate(-3deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotate-animation:hover {
+  transform: rotate(0deg);
+}
+
+h4 {
+  position: relative;
+  display: inline-block;
+}
+
+h4:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    #ff3366,
+    #ff9933,
+    #33cc33,
+    #3399ff,
+    #cc33ff
+  );
+  border-radius: 5px;
+}
+
+body1 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
   }
-  
-  @keyframes rotateIn {
-    from {
-      transform: rotate(-10deg);
-    }
-    to {
-      transform: rotate(0deg);
-    }
+  to {
+    opacity: 1;
   }
-  
-  .text-fade-in {
-    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes textFadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .rotate-animation {
-    animation: rotateIn 1s ease-out;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUpAnimation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
   }
 
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
   .box {
-    animation: fadeIn 1s ease-out;
+    margin-bottom: 10px;
   }
-  
-  .container {
-    animation: fadeIn 1s ease-out;
-  }
-  
-  .container h4,
-  .container p {
-    animation: fadeIn 1s ease-out;
-    animation-delay: 0.5s;
-  }
-    
+}
