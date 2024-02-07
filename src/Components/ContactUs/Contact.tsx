@@ -1,8 +1,12 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { TextField, Button, Box, Container, Grid } from "@mui/material";
 import "./Contact.css";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+  
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
