@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Routes, createBrowserRouter } from "react-router-dom";
 import Wrapper from "./Common/Wrapper";
 import Home from "./Components/Home/Home";
 import Contact from "./Components/ContactUs/Contact";
@@ -8,16 +8,12 @@ import PreWedding from "./Components/Pre_Wedding/PreWedding";
 import WeddingPage from "./Components/Wedding/WeddingPage";
 
 
-export const router = createBrowserRouter([
-  {
 
+export const router = createBrowserRouter([  
+   {
     element: <Wrapper />,
     errorElement: <div>Error 404, Page not found</div>,
     children: [
-      {
-        path:"/WeddingLive/",
-        element:<Home />
-      },
       {
         path: "/",
         element: <Home />,
@@ -44,5 +40,6 @@ export const router = createBrowserRouter([
       },
     ],
   },
-]);
-
+], {
+  basename: "/WeddingLive"
+});
