@@ -1,4 +1,4 @@
-import { Routes, createBrowserRouter } from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
 import Wrapper from "./Common/Wrapper";
 import Home from "./Components/Home/Home";
 import Contact from "./Components/ContactUs/Contact";
